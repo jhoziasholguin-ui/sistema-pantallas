@@ -53,6 +53,40 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
     }
 
+    @ExceptionHandler(ClienteNoEncontradoException.class)
+    public ResponseEntity<ApiErrorDto> manejarClienteNoEncontrado(
+            ClienteNoEncontradoException ex,
+            HttpServletRequest request) {
+
+        ApiErrorDto error = new ApiErrorDto(
+                LocalDateTime.now(),
+                HttpStatus.NOT_FOUND.value(),
+                "Not Found",
+                ex.getMessage(),
+                request.getRequestURI(),
+                null
+        );
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+    }
+
+    @ExceptionHandler({DniRucDuplicadoException.class, RazonSocialDuplicadaException.class})
+    public ResponseEntity<ApiErrorDto> manejarClienteDuplicado(
+            RuntimeException ex,
+            HttpServletRequest request) {
+
+        ApiErrorDto error = new ApiErrorDto(
+                LocalDateTime.now(),
+                HttpStatus.CONFLICT.value(),
+                "Conflict",
+                ex.getMessage(),
+                request.getRequestURI(),
+                null
+        );
+
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiErrorDto> manejarValidaciones(
             MethodArgumentNotValidException ex,

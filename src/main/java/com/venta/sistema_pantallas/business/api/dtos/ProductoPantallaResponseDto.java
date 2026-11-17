@@ -1,6 +1,5 @@
-package com.venta.sistema_pantallas.business.api.Dtos;
+package com.venta.sistema_pantallas.business.api.dtos;
 import com.venta.sistema_pantallas.business.data.entities.CalidadPantalla;
-import jakarta.validation.constraints.*;
 import lombok.*;
 import java.math.BigDecimal;
 

@@ -1,7 +1,7 @@
 package com.venta.sistema_pantallas.business.domain.services.impl;
 
-import com.venta.sistema_pantallas.business.api.Dtos.ProductoPantallaRequestDto;
-import com.venta.sistema_pantallas.business.api.Dtos.ProductoPantallaResponseDto;
+import com.venta.sistema_pantallas.business.api.dtos.ProductoPantallaRequestDto;
+import com.venta.sistema_pantallas.business.api.dtos.ProductoPantallaResponseDto;
 import com.venta.sistema_pantallas.business.data.repositories.ProductoPantallaRepository;
 import com.venta.sistema_pantallas.business.domain.mappers.ProductoPantallaMapper;
 import com.venta.sistema_pantallas.business.domain.services.ProductoPantallaService;

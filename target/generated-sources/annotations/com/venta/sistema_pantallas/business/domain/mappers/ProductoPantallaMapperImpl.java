@@ -1,7 +1,7 @@
 package com.venta.sistema_pantallas.business.domain.mappers;
 
-import com.venta.sistema_pantallas.business.api.Dtos.ProductoPantallaRequestDto;
-import com.venta.sistema_pantallas.business.api.Dtos.ProductoPantallaResponseDto;
+import com.venta.sistema_pantallas.business.api.dtos.ProductoPantallaRequestDto;
+import com.venta.sistema_pantallas.business.api.dtos.ProductoPantallaResponseDto;
 import com.venta.sistema_pantallas.business.data.entities.ProductoPantalla;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-11-16T17:18:49-0500",
+    date = "2026-11-17T07:46:47-0500",
     comments = "version: 1.6.3, compiler: javac, environment: Java 25.0.5 (Eclipse Adoptium)"
 )
 @Component
